@@ -14,6 +14,7 @@ class Explosion
 
   def initialize(animation, sound, x, y)
     @animation = animation
+
     sound.play
     @x, @y = x, y
     @current_frame = 0
@@ -31,10 +32,6 @@ class Explosion
 
   def done?
     @done ||= @current_frame == @animation.size
-  end
-
-  def sound
-    @sound.play
   end
 
   private
