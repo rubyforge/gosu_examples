@@ -1,8 +1,9 @@
+
 require 'gosu'
 
 class GameWindow < Gosu::Window
   def initialize
-    super(320, 240, false)
+    super(320, 240)
     self.caption = 'Hello Movement'
     @x = @y = 10
     @draws = 0
@@ -31,7 +32,8 @@ class GameWindow < Gosu::Window
 
   def draw
     @draws += 1
-    @message = Gosu::Image.from_text(self, info, Gosu.default_font_name, 30)
+    @message = Gosu::Image.from_text(
+      self, info, Gosu.default_font_name, 30)
     @message.draw(@x, @y, 0)
   end
 

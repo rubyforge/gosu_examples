@@ -1,8 +1,9 @@
+
 require 'gosu'
 
 class GameWindow < Gosu::Window
   def initialize
-    super(320, 240, false)
+    super(320, 240)
     self.caption = 'Hello'
     @message = Gosu::Image.from_text(self, 'Hello, World!', Gosu.default_font_name, 30)
   end
